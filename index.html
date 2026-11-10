@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Crasta Friends</title>
+</head>
+<body>
+  <h1>Crasta Friends</h1>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/13.2.0/firebase-app.js";
+    import { getAuth } from "https://www.gstatic.com/firebasejs/13.2.0/firebase-auth.js";
+    import { getFirestore } from "https://www.gstatic.com/firebasejs/13.2.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyB9GMlK3pLkJ1yMZ0vjF9ES4XJac2n-8Rc",
+      authDomain: "crasta-friends.firebaseapp.com",
+      projectId: "crasta-friends",
+      storageBucket: "crasta-friends.firebasestorage.app",
+      messagingSenderId: "190502361053",
+      appId: "1:190502361053:web:1b84fbd3363e4e262ac834",
+      measurementId: "G-GL4T3G05GQ"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    window.auth = getAuth(app);
+    window.db = getFirestore(app);
+  </script>
+</body>
+</html>
